@@ -3,11 +3,6 @@ require("@openzeppelin/hardhat-upgrades");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.22",
-  networks: {
-    hardhat: {
-    }
-  },
   solidity: {
     compilers: [
       {
@@ -21,5 +16,19 @@ module.exports = {
         }
       }
     ]
+  },
+  networks: {
+    hardhat: {
+    },
+    testnet: {
+      url: process.env.TESTNET_RPC_URL || "",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: parseInt(process.env.CHAIN_ID) || 1
+    },
+    mainnet: {
+      url: process.env.MAINNET_RPC_URL || "",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: parseInt(process.env.CHAIN_ID) || 1
+    }
   }
 };
