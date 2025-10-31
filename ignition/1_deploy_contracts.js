@@ -20,7 +20,9 @@ async function main() {
       parseInt(chainId),
       parseInt(validatorFee),
       devValidators
-    ], { initializer: 'initialize' });
+    ], { initializer: 'initialize',
+      kind: 'uups'
+    });
     
     await proxy.deployed();
     console.log('DvBridge proxy deployed to:', proxy.address);
@@ -35,7 +37,9 @@ async function main() {
       parseInt(chainId),
       parseInt(validatorFee),
       validators
-    ], { initializer: 'initialize' });
+    ], { initializer: 'initialize',
+      kind: 'uups'
+    });
     
     await proxy.deployed();
     console.log('DvBridge proxy deployed to:', proxy.address);
