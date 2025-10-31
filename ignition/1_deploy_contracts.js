@@ -23,9 +23,18 @@ async function main() {
     ], { initializer: 'initialize',
       kind: 'uups'
     });
-    
+
     await proxy.deployed();
-    console.log('DvBridge proxy deployed to:', proxy.address);
+
+    const implementationAddress = await upgrades.erc1967.getImplementationAddress(proxy.address);
+
+    console.log('\n=== DvBridge Deployment (Development) ===');
+    console.log('Proxy Address:', proxy.address);
+    console.log('Implementation Address:', implementationAddress);
+    console.log('Chain ID:', chainId);
+    console.log('Validator Fee:', validatorFee);
+    console.log('Validators:', devValidators);
+    console.log('=========================================\n');
   } else {
     // Production deployment
     if (validators.length === 0) {
@@ -40,9 +49,19 @@ async function main() {
     ], { initializer: 'initialize',
       kind: 'uups'
     });
-    
+
     await proxy.deployed();
-    console.log('DvBridge proxy deployed to:', proxy.address);
+
+    const implementationAddress = await upgrades.erc1967.getImplementationAddress(proxy.address);
+
+    console.log('\n=== DvBridge Deployment (Production) ===');
+    console.log('Proxy Address:', proxy.address);
+    console.log('Implementation Address:', implementationAddress);
+    console.log('Chain ID:', chainId);
+    console.log('Validator Fee:', validatorFee);
+    console.log('Validators:', validators);
+    console.log('Network:', network);
+    console.log('========================================\n');
   }
 }
 

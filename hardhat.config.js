@@ -10,25 +10,48 @@ module.exports = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 200
+            runs: 200,
           },
-          evmVersion: "paris"
-        }
-      }
-    ]
+          evmVersion: "paris",
+        },
+      },
+    ],
   },
   networks: {
-    hardhat: {
-    },
-    testnet: {
+    hardhat: {},
+    columbus: {
       url: process.env.TESTNET_RPC_URL || "",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: parseInt(process.env.CHAIN_ID) || 1
+      chainId: parseInt(process.env.CHAIN_ID) || 1,
     },
-    mainnet: {
+    camino: {
       url: process.env.MAINNET_RPC_URL || "",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: parseInt(process.env.CHAIN_ID) || 1
-    }
-  }
+      chainId: parseInt(process.env.CHAIN_ID) || 1,
+    },
+  },
+  etherscan: {
+    apiKey: {
+      columbus: "abc",
+      camino: "abc",
+    },
+    customChains: [
+      {
+        network: "columbus",
+        chainId: 501,
+        urls: {
+          apiURL: "https://columbus.caminoscan.com/api",
+          browserURL: "https://columbus.caminoscan.com",
+        },
+      },
+      {
+        network: "camino",
+        chainId: 500,
+        urls: {
+          apiURL: "https://caminoscan.com/api",
+          browserURL: "https://caminoscan.com",
+        },
+      },
+    ],
+  },
 };
