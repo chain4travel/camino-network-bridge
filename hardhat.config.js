@@ -20,14 +20,14 @@ module.exports = {
   networks: {
     hardhat: {},
     columbus: {
-      url: process.env.TESTNET_RPC_URL || "",
+      url: process.env.TESTNET_RPC_URL || "https://columbus.camino.network/ext/bc/C/rpc",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: parseInt(process.env.CHAIN_ID) || 1,
+      chainId: 501,
     },
     camino: {
-      url: process.env.MAINNET_RPC_URL || "",
+      url: process.env.MAINNET_RPC_URL || "https://api.camino.network/ext/bc/C/rpc",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: parseInt(process.env.CHAIN_ID) || 1,
+      chainId: 500,
     },
   },
   etherscan: {
