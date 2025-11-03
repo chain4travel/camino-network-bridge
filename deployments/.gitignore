@@ -1,0 +1,6 @@
+# Deployment artifacts are environment-specific
+# Only commit to git if you want to track deployment history
+# Default is to commit all except hardhat
+hardhat.json
+
+
