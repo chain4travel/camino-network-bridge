@@ -29,6 +29,26 @@ module.exports = {
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 500,
     },
+    sepolia: {
+      url: process.env.SEPOLIA_RPC_URL || "https://bsc-testnet.drpc.org",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 11155111,
+    },
+    ethereum: {
+      url: process.env.ETHEREUM_RPC_URL || "https://eth.drpc.org",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 1,
+    },
+    bscTestnet: {
+      url: process.env.BSC_TESTNET_RPC_URL || "https://sepolia.drpc.org",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 97,
+    },
+    bsc: {
+      url: process.env.BSC_RPC_URL || "https://bsc.drpc.org",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 56,
+    },
   },
   etherscan: {
     apiKey: {
