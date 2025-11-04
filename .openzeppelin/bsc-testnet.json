@@ -1,0 +1,236 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x7A7707bEe60b3904E6748b576F7d65819fb1B783",
+      "txHash": "0x0ad04b854e1b8edce025f00c79bb0f62f4c7a07960f0a31eedd3311b20464e9a",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "d0095a2786a40952c1623509003a210496119d55ea82ce4c5ab56061fb872f5d": {
+      "address": "0x2D443170074ec1c98BF7CAF022614A32dB245940",
+      "txHash": "0x9ac5ffed4bf7b7e4448abce7e1f163169bdbe8aa032124fe6c02cb4a460747d9",
+      "layout": {
+        "solcVersion": "0.8.22",
+        "storage": [
+          {
+            "label": "validators",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "ValidatorSignatureManager",
+            "src": "contracts/ValidatorSignatureManager.sol:11"
+          },
+          {
+            "label": "chain_id",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ValidatorSignatureManager",
+            "src": "contracts/ValidatorSignatureManager.sol:12"
+          },
+          {
+            "label": "DOMAIN_SEPARATOR",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bytes32",
+            "contract": "ValidatorSignatureManager",
+            "src": "contracts/ValidatorSignatureManager.sol:14"
+          },
+          {
+            "label": "validatorVotes",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_string_memory_ptr,t_bool)",
+            "contract": "ValidatorSignatureManager",
+            "src": "contracts/ValidatorSignatureManager.sol:26"
+          },
+          {
+            "label": "allowedTransferVotes",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_string_memory_ptr,t_bool)",
+            "contract": "TransferManager",
+            "src": "contracts/TransferManager.sol:17"
+          },
+          {
+            "label": "mintableTokenVotes",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_mapping(t_string_memory_ptr,t_bool)",
+            "contract": "TransferManager",
+            "src": "contracts/TransferManager.sol:19"
+          },
+          {
+            "label": "mintable_tokens",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "TransferManager",
+            "src": "contracts/TransferManager.sol:22"
+          },
+          {
+            "label": "allowed_transfers",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_mapping(t_uint256,t_mapping(t_uint256,t_mapping(t_address,t_struct(DestinationToken)3448_storage)))",
+            "contract": "TransferManager",
+            "src": "contracts/TransferManager.sol:24"
+          },
+          {
+            "label": "transfers",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_bytes_memory_ptr,t_bool)",
+            "contract": "TransferManager",
+            "src": "contracts/TransferManager.sol:27"
+          },
+          {
+            "label": "locked",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_bool",
+            "contract": "DvBridge",
+            "src": "contracts/DvBridge.sol:14"
+          },
+          {
+            "label": "validator_fee",
+            "offset": 0,
+            "slot": "10",
+            "type": "t_uint256",
+            "contract": "DvBridge",
+            "src": "contracts/DvBridge.sol:15"
+          },
+          {
+            "label": "validatorFeeAndLockVotes",
+            "offset": 0,
+            "slot": "11",
+            "type": "t_mapping(t_string_memory_ptr,t_bool)",
+            "contract": "DvBridge",
+            "src": "contracts/DvBridge.sol:17"
+          },
+          {
+            "label": "upgradeVotes",
+            "offset": 0,
+            "slot": "12",
+            "type": "t_mapping(t_string_memory_ptr,t_bool)",
+            "contract": "DvBridge",
+            "src": "contracts/DvBridge.sol:18"
+          },
+          {
+            "label": "isUpgrading",
+            "offset": 0,
+            "slot": "13",
+            "type": "t_bool",
+            "contract": "DvBridge",
+            "src": "contracts/DvBridge.sol:28"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_bytes_memory_ptr": {
+            "label": "bytes",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(DestinationToken)3448_storage)": {
+            "label": "mapping(address => struct TransferManager.DestinationToken)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes_memory_ptr,t_bool)": {
+            "label": "mapping(bytes => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_bool)": {
+            "label": "mapping(string => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_struct(DestinationToken)3448_storage))": {
+            "label": "mapping(uint256 => mapping(address => struct TransferManager.DestinationToken))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_uint256,t_mapping(t_address,t_struct(DestinationToken)3448_storage)))": {
+            "label": "mapping(uint256 => mapping(uint256 => mapping(address => struct TransferManager.DestinationToken)))",
+            "numberOfBytes": "32"
+          },
+          "t_string_memory_ptr": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(DestinationToken)3448_storage": {
+            "label": "struct TransferManager.DestinationToken",
+            "members": [
+              {
+                "label": "token_out",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "active",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "0"
+              },
+              {
+                "label": "max_amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_bytes_storage": {
+            "label": "bytes"
+          },
+          "t_uint64": {
+            "label": "uint64"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
