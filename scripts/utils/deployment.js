@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { ethers } = require("hardhat");
+const { ENV_VAR_MAP } = require("../config/networks");
 
 /**
  * Validate that an address is a valid Ethereum address
@@ -108,14 +109,8 @@ function parseDeploymentConfig(config, networkName, networkType, defaultValidato
   // Parse validators based on network type
   let validators = defaultValidators;
 
-  // Check for network-type-specific environment variables first
-  const envVarMap = {
-    testnet: "TESTNET_VALIDATORS",
-    mainnet: "MAINNET_VALIDATORS",
-    local: "LOCAL_VALIDATORS",
-  };
-
-  const envVar = envVarMap[networkType];
+  // Check for network-type-specific environment variables
+  const envVar = ENV_VAR_MAP[networkType];
   if (process.env[envVar]) {
     validators = process.env[envVar].split(",").map((addr) => addr.trim());
   }

@@ -1,6 +1,6 @@
 const hre = require("hardhat");
 const { ethers, upgrades } = require("hardhat");
-const { getNetworkConfig, getValidators } = require("./config/networks");
+const { getNetworkConfig, getValidators, ENV_VAR_MAP } = require("./config/networks");
 const {
   validateValidators,
   parseDeploymentConfig,
@@ -104,12 +104,7 @@ async function main() {
 
   // Validate validators
   if (config.validators.length === 0) {
-    const envVarMap = {
-      testnet: "TESTNET_VALIDATORS",
-      mainnet: "MAINNET_VALIDATORS",
-      local: "LOCAL_VALIDATORS",
-    };
-    const envVar = envVarMap[networkType];
+    const envVar = ENV_VAR_MAP[networkType];
 
     throw new Error(
       `No validators configured for ${networkType} networks.\n` +

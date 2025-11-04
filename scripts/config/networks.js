@@ -68,6 +68,15 @@ const VALIDATOR_CONFIG = {
 };
 
 /**
+ * Mapping of network types to their environment variable names
+ */
+const ENV_VAR_MAP = {
+  testnet: "TESTNET_VALIDATORS",
+  mainnet: "MAINNET_VALIDATORS",
+  local: "LOCAL_VALIDATORS",
+};
+
+/**
  * Get configuration for a specific network
  * @param {string} networkName - Name of the network
  * @returns {object} Network configuration
@@ -132,6 +141,7 @@ function getValidators(networkName) {
 module.exports = {
   NETWORK_CONFIG,
   VALIDATOR_CONFIG,
+  ENV_VAR_MAP,
   getNetworkConfig,
   getValidators,
   getNetworkType,
