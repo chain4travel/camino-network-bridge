@@ -30,7 +30,7 @@ module.exports = {
       chainId: 500,
     },
     sepolia: {
-      url: process.env.SEPOLIA_RPC_URL || "https://bsc-testnet.drpc.org",
+      url: process.env.SEPOLIA_RPC_URL || "https://sepolia.drpc.org",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 11155111,
     },
@@ -40,7 +40,7 @@ module.exports = {
       chainId: 1,
     },
     bscTestnet: {
-      url: process.env.BSC_TESTNET_RPC_URL || "https://sepolia.drpc.org",
+      url: process.env.BSC_TESTNET_RPC_URL || "https://bsc-testnet.drpc.org",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 97,
     },
