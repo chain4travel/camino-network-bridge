@@ -1,0 +1,19 @@
+{
+  "networkName": "columbus",
+  "description": "Camino Columbus Testnet",
+  "chainId": 501,
+  "networkType": "testnet",
+  "proxyAddress": "0xffDAf09685e8c42Ed8bcAdaA00fEbcecacC56C8c",
+  "implementationAddress": "0x640CC3Af2E04F99232af4A48835BeF2B8f258757",
+  "proxyTxHash": "0x32abf314e49acd64667917f59ac6c2dc06e7f75fa4314a76ac596348e7e21abd",
+  "implementationTxHash": "0x28ef9a7c875656f66afa2ee771d57d3baf6b72d63e5bd56bf79b3c882e0057c8",
+  "validatorFee": "5000000000000000000",
+  "validatorFeeInEth": "5",
+  "validators": [
+    "0x291981335f930c2a06499fa5fd6e380ea5d59d46",
+    "0xb2bd61961963448210a5f3c2994ce935f7daae2c",
+    "0xb53aded16afe08d14e5c95dbdba4e6b30d9f8319"
+  ],
+  "deployer": "0x3Ed0Bf43Aab14d28c6d91d58f32E58BEb031d938",
+  "timestamp": "2025-11-04T12:56:57.786Z"
+}
