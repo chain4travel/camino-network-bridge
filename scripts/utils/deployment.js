@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { ethers } = require("ethers");
+const { ethers } = require("hardhat");
 
 /**
  * Validate that an address is a valid Ethereum address
@@ -100,7 +100,7 @@ function parseDeploymentConfig(config, networkName, networkType, defaultValidato
     validatorFee = ethers.utils.parseEther(validatorFeeInEth).toString();
   } catch (error) {
     throw new Error(
-      `Invalid VALIDATOR_FEE: ${validatorFeeInEth}. Must be a valid ETH/CAM amount (e.g., "5" for 5 CAM).`
+      `Invalid VALIDATOR_FEE: ${validatorFeeInEth}. Must be a valid ETH/CAM amount (e.g., "5" for 5 CAM).`,
     );
   }
   validateValidatorFee(validatorFee);
