@@ -1,0 +1,19 @@
+{
+  "networkName": "sepolia",
+  "description": "Ethereum Sepolia Testnet",
+  "chainId": 11155111,
+  "networkType": "testnet",
+  "proxyAddress": "0x7A7707bEe60b3904E6748b576F7d65819fb1B783",
+  "implementationAddress": "0x2D443170074ec1c98BF7CAF022614A32dB245940",
+  "proxyTxHash": "0x6853037e5f0e98737e2c24e62e65b3ef5d2038f600e07db9d73efe031030e7af",
+  "implementationTxHash": "0x659f13bb33962725afb9824a175877e9381d5980e06b76daba6f2783f06626f0",
+  "validatorFee": "100000000000000",
+  "validatorFeeInEth": "0.0001",
+  "validators": [
+    "0x291981335f930c2a06499fa5fd6e380ea5d59d46",
+    "0xb2bd61961963448210a5f3c2994ce935f7daae2c",
+    "0xb53aded16afe08d14e5c95dbdba4e6b30d9f8319"
+  ],
+  "deployer": "0x3Ed0Bf43Aab14d28c6d91d58f32E58BEb031d938",
+  "timestamp": "2025-11-04T13:09:14.074Z"
+}
